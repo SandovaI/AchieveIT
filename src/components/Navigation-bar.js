@@ -5,6 +5,7 @@ import './navbar.css';
 
 function Navigation() {
     return(
+        <header>
         <ul> 
             <li>
                 <NavLink to = '/'>
@@ -27,6 +28,7 @@ function Navigation() {
                 </NavLink>
             </li>
         </ul>
+        </header>
         
     );
 }
