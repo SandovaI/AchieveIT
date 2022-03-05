@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 //Libraries
-import { Web3ReactProvider } from "web3-react/core";
+import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
 //import Routers
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -14,6 +14,8 @@ import Home from "./components/Home.js";
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Roadmap from "./components/Roadmap.js";
+// Wallet connection
+import WalletConnection from "./components/wallet-connector/WalletConnection";
 import reportWebVitals from "./reportWebVitals";
 
 function getLibrary(provider) {
@@ -31,6 +33,9 @@ ReactDOM.render(
         <Route path="/Roadmap" element={<Roadmap />} />
       </Routes>
     </Router>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <WalletConnection />
+    </Web3ReactProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
