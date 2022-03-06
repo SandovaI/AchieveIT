@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./nav.module.scss";
 import logo from "../../logo.svg";
+import WalletConnection from "../Wallet/WalletConnection";
 function Navigation() {
   return (
     <header className={styles.header}>

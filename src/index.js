@@ -14,7 +14,7 @@ import About from "./components/Nav-bar/About.js";
 import Contact from "./components/Nav-bar/Contact.js";
 import Roadmap from "./components/Nav-bar/Roadmap.js";
 // Wallet connection
-import WalletConnection from "./components/Web3/Wallet/WalletConnection";
+import WalletConnection from "./components/Wallet/WalletConnection";
 import reportWebVitals from "./reportWebVitals";
 
 function getLibrary(provider) {
