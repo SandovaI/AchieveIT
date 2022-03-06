@@ -1,7 +1,31 @@
-.navi {
+.nav {
+  overflow: hidden;
+}
+.navitems {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+}
+.navitem {
+  margin-left: 3rem;
+  list-style-type: none;
 }
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerlogo {
+  display: flex;
+}
+.headerLogoIcon {
+  width: 4rem;
+  height: 5rem;
+}
+.headerLogoText {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  //padding-left: 2rem;
 }
