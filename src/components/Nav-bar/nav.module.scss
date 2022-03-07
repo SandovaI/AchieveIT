@@ -1,9 +1,9 @@
 .nav {
   overflow: hidden;
 }
+
 .navitems {
   display: flex;
-  justify-content: flex-end;
 }
 .navitem {
   margin-left: 3rem;
@@ -15,6 +15,7 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 1px 1px;
 }
 .headerlogo {
   display: flex;
@@ -28,4 +29,13 @@
   align-items: center;
   font-size: 1rem;
   //padding-left: 2rem;
+}
+.isConnected {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 0.5rem;
+}
+.countdown {
+  display: flex;
 }

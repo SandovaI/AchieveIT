@@ -24,7 +24,10 @@ function getLibrary(provider) {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Navigation />
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <Navigation />
+      </Web3ReactProvider>
+
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/About" element={<About />} />
@@ -32,9 +35,6 @@ ReactDOM.render(
         <Route path="/Roadmap" element={<Roadmap />} />
       </Routes>
     </Router>
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <WalletConnection />
-    </Web3ReactProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
