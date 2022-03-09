@@ -1,0 +1,41 @@
+.nav {
+  overflow: hidden;
+}
+
+.navitems {
+  display: flex;
+}
+.navitem {
+  margin-left: 3rem;
+  list-style-type: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px;
+}
+.headerlogo {
+  display: flex;
+}
+.headerLogoIcon {
+  width: 4rem;
+  height: 5rem;
+}
+.headerLogoText {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-left: 2rem;
+}
+.isConnected {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 0.5rem;
+}
+.countdown {
+  display: flex;
+}

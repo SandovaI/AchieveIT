@@ -1,16 +1,39 @@
-import "./App.css";
+import styles from "./app.module.scss";
+import { NavLink } from "react-router-dom";
+import logo from "./logo.svg";
+import WalletConnection from "./components/Wallet/WalletConnection";
 
 function App() {
   return (
-    <h1>
-      A self-improvement/productivity game to incentivize men to build
-      discipline, grasp inner potential, and leave the comfort of the 21st
-      century. A game that embodies david goggin's mantra of "staying hard".
-      Nft/tokens are rewarded for doing hard tasks in real life. This could
-      include ice baths, running long distance etc. This would be uploaded on
-      ones profile in exchange for the games crypto tokens which would keep a
-      digital record of your progress. Avatar and xp system.
-    </h1>
+    <header className={styles.header}>
+      <div className={styles.headerlogo}>
+        <NavLink to="/">
+          <img className={styles.headerLogoIcon} src={logo} alt=""></img>
+        </NavLink>
+        <h1 className={styles.headerLogoText}>Achieve It</h1>
+        <div className={styles.isConnected}></div>
+      </div>
+
+      <nav className={styles.nav}>
+        <ul className={styles.navitems}>
+          <li className={styles.navitem}>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li className={styles.navitem}>
+            <NavLink to="/About">About</NavLink>
+          </li>
+          <li className={styles.navitem}>
+            <NavLink to="/Contact">Contact</NavLink>
+          </li>
+          <li className={styles.navitem}>
+            <NavLink to="/RoadMap">Roadmap</NavLink>
+          </li>
+          <li className={styles.navitem}>
+            <WalletConnection />
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 

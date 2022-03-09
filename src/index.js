@@ -25,15 +25,14 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Web3ReactProvider getLibrary={getLibrary}>
-        <Navigation />
+        <App />
       </Web3ReactProvider>
-
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<App />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Roadmap" element={<Roadmap />} />
-      </Routes>
+      </Routes> */}
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

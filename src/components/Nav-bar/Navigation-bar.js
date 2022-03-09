@@ -8,7 +8,6 @@ import CountdownTimer from "../Countdown/CountdownTimer";
 function Navigation() {
   const DAYS = 3 * 24 * 60 * 60 * 1000;
   const NOW = new Date().getTime();
-
   const dateTimeAfterDays = NOW + DAYS;
   return (
     <header className={styles.header}>

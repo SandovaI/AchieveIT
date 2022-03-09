@@ -19,21 +19,26 @@ COPY .expired-notice {
 .show-counter {
   padding: 0.5rem;
 }
-
-.show-counter .countdown-link {
+.button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  padding: 0.5rem;
-  border: 1px solid #ebebeb;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  color: #000;
 }
+// .show-counter .countdown-link {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   font-weight: 700;
+//   font-size: 1.25rem;
+//   line-height: 1.75rem;
+//   padding: 0.5rem;
+//   border: 1px solid #ebebeb;
+//   border-radius: 0.25rem;
+//   text-decoration: none;
+//   color: #000;
+// }
 
 .show-counter .countdown {
   line-height: 1.25rem;

@@ -27,5 +27,4 @@ function WalletConnection() {
     </button>
   );
 }
-
 export default WalletConnection;
