@@ -15,19 +15,40 @@
 .navitems {
   display: flex;
 }
+
 .navitem {
   margin-left: 3rem;
   list-style-type: none;
 }
+.rightHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rightItem {
+  width: 50%;
+  height: 50%;
+}
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
 .headerlogo {
   display: flex;
+  margin-left: -6rem;
 }
 .headerLogoIcon {
   width: 4rem;
@@ -48,12 +69,14 @@
   display: flex;
 }
 .main {
-  margin-top: 15rem;
-  background-image: url(./assets/black-vector.svg);
+  display: flex;
+  flex-direction: column;
 }
 .mainLogo {
+  padding-left: 3rem;
+  //margin-bottom: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .mainLogo .left {
   font-family: Montserrat;
@@ -70,4 +93,99 @@
   font-weight: bold;
   font-size: 144px;
   -webkit-text-stroke: 2px white;
+}
+.background {
+  // background-image: url(./assets/black-vector.svg);
+  background-color: #333333;
+}
+.motto {
+  font-family: Montserrat;
+  color: white;
+  font-style: normal;
+  font-size: 116px;
+  margin-top: 2rem;
+  .mottoText {
+    padding-left: 2rem;
+    width: 45%;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  div {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    h1 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 53px;
+      color: #ffffff;
+    }
+  }
+
+  p {
+    width: 50%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    display: flex;
+    justify-content: center;
+    h1 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 53px;
+      color: #ffffff;
+    }
+  }
+
+  p {
+    width: 50%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    h1 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 53px;
+      color: #ffffff;
+    }
+  }
+
+  p {
+    width: 50%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
 }

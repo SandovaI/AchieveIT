@@ -23,7 +23,7 @@ function WalletConnection() {
 
   return (
     <button type="button" onClick={connect}>
-      Connect Wallet
+      Start
     </button>
   );
 }
