@@ -4,14 +4,7 @@ import logo from "./logo.svg";
 import discord from "./assets/discord.svg";
 import WalletConnection from "./components/Wallet/WalletConnection";
 import ConnectionDisplay from "./components/Wallet/ConnectionDisplay";
-function scroll() {
-  var my_element = document.getElementById("about");
-  my_element.scrollIntoView({
-    behavior: "smooth",
-    // block: "start",
-    // inline: "nearest",
-  });
-}
+import NavButton from "./components/Nav-bar/NavButton";
 function App() {
   return (
     <body className={styles.body}>
@@ -25,11 +18,7 @@ function App() {
         <nav className={styles.nav}>
           <ul className={styles.navitems}>
             <li className={styles.navitem}>
-              {/* <a href="#about"> */}
-              <button onClick={scroll} className={styles.button}>
-                About
-              </button>
-              {/* </a> */}
+              <NavButton name="About" />
             </li>
             <li className={styles.navitem}>
               <button className={styles.button}>Roadmap</button>
@@ -59,7 +48,7 @@ function App() {
           <div className={styles.motto}>
             <p className={styles.mottoText}>ACHIEVE YOUR FULL POTENTIAL</p>
           </div>
-          <div id="about" className={styles.about}>
+          <div id="About" className={styles.about}>
             <div>
               <h1>What is AchieveIt?</h1>
             </div>
