@@ -21,10 +21,10 @@ function App() {
               <NavButton name="About" />
             </li>
             <li className={styles.navitem}>
-              <button className={styles.button}>Roadmap</button>
+              <NavButton name="Roadmap" />
             </li>
             <li className={styles.navitem}>
-              <button className={styles.button}>Contact</button>
+              <NavButton name="Contact" />
             </li>
           </ul>
         </nav>
@@ -61,7 +61,7 @@ function App() {
             </p>
           </div>
 
-          <div className={styles.roadmap}>
+          <div id="Roadmap" className={styles.roadmap}>
             <div>
               <h1>Roadmap</h1>
             </div>
@@ -74,7 +74,7 @@ function App() {
               etc. And by end of 2023 we want at least 400,000 users nationally.
             </p>
           </div>
-          <div className={styles.contact}>
+          <div id="Contact" className={styles.contact}>
             <div>
               <h1>Our Team</h1>
             </div>
