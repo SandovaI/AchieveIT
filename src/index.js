@@ -9,10 +9,6 @@ import Web3 from "web3";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // components
 import App from "./App";
-import Navigation from "./components/Nav-bar/Navigation-bar.js";
-import About from "./components/Nav-bar/About.js";
-import Contact from "./components/Nav-bar/Contact.js";
-import Roadmap from "./components/Nav-bar/Roadmap.js";
 // Wallet connection
 import WalletConnection from "./components/Wallet/WalletConnection";
 import reportWebVitals from "./reportWebVitals";

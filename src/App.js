@@ -5,7 +5,7 @@ import discord from "./assets/discord.svg";
 import WalletConnection from "./components/Wallet/WalletConnection";
 import ConnectionDisplay from "./components/Wallet/ConnectionDisplay";
 function scroll() {
-  var my_element = document.getElementById(styles.about);
+  var my_element = document.getElementById("about");
   my_element.scrollIntoView({
     behavior: "smooth",
     // block: "start",
@@ -25,9 +25,11 @@ function App() {
         <nav className={styles.nav}>
           <ul className={styles.navitems}>
             <li className={styles.navitem}>
-              <a href="#about">
-                <button className={styles.button}>About</button>
-              </a>
+              {/* <a href="#about"> */}
+              <button onClick={scroll} className={styles.button}>
+                About
+              </button>
+              {/* </a> */}
             </li>
             <li className={styles.navitem}>
               <button className={styles.button}>Roadmap</button>
