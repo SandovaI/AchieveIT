@@ -9,6 +9,7 @@ import Web3 from "web3";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // components
 import App from "./App";
+import Game from "./components/Game/Game";
 // Wallet connection
 import WalletConnection from "./components/Wallet/WalletConnection";
 import reportWebVitals from "./reportWebVitals";
@@ -20,15 +21,11 @@ function getLibrary(provider) {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Web3ReactProvider getLibrary={getLibrary}>
-        <App />
-      </Web3ReactProvider>
-      {/* <Routes>
+      <Web3ReactProvider getLibrary={getLibrary}></Web3ReactProvider>
+      <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Roadmap" element={<Roadmap />} />
-      </Routes> */}
+        <Route path="/Home" element={<Game />} />
+      </Routes>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

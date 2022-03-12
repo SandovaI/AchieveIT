@@ -36,7 +36,9 @@ function App() {
               alt="discord logo"
             ></img>
           </a>
-          <WalletConnection className={styles.rightItem} />
+          <NavLink to="/Home">
+            <WalletConnection className={styles.rightItem} />
+          </NavLink>
         </div>
       </header>
       <main className={styles.main}>
@@ -79,12 +81,10 @@ function App() {
               <h1>Our Team</h1>
             </div>
             <p>
-              By the end of 2022 we want at least 1000 Beta-Testers on our site
-              as well as 10000 people in our community discord server.
-              Eventually we will have a team of people creating custom NFT’s for
-              top contenders on the leaderboard as well as people who are the
-              first to complete the challenge in their city/state/nation/world
-              etc. And by end of 2023 we want at least 400,000 users nationally.
+              Who are we? At achieve it we are an independently functioning
+              organization with hopes of changing the world of Web 3.0 forever.
+              As of right now we wish to remain anonymous but we hope you will
+              join us on this journey!
             </p>
           </div>
         </div>

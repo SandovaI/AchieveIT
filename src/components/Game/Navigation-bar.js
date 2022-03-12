@@ -5,7 +5,7 @@ import logo from "../../logo.svg";
 import WalletConnection from "../Wallet/WalletConnection";
 import ConnectionDisplay from "../Wallet/ConnectionDisplay";
 import CountdownTimer from "../Countdown/CountdownTimer";
-function Navigation() {
+function Game() {
   const DAYS = 3 * 24 * 60 * 60 * 1000;
   const NOW = new Date().getTime();
   const dateTimeAfterDays = NOW + DAYS;
@@ -46,4 +46,4 @@ function Navigation() {
     </header>
   );
 }
-export default Navigation;
+export default Game;
