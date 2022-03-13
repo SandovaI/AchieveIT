@@ -2,6 +2,7 @@ import React from "react";
 import { useCountdown } from "../../Hooks/useCountdown";
 import DateTimeDisplay from "./DateTimeDisplay";
 import countdown from "./countdown.scss";
+import { NavLink } from "react-router-dom";
 const ExpiredNotice = () => {
   return (
     <div className="expired-notice">
@@ -13,15 +14,17 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="show-counter">
-      <button className="button">
-        <DateTimeDisplay value={days} type={"Days"} isDanger={days <= 3} />
-        <p>:</p>
-        <DateTimeDisplay value={hours} type={"Hours"} isDanger={false} />
-        <p>:</p>
-        <DateTimeDisplay value={minutes} type={"Mins"} isDanger={false} />
-        <p>:</p>
-        <DateTimeDisplay value={seconds} type={"Seconds"} isDanger={false} />
-      </button>
+      <NavLink to="/challenges">
+        <button className="button">
+          <DateTimeDisplay value={days} type={"Days"} isDanger={days <= 3} />
+          <p>:</p>
+          <DateTimeDisplay value={hours} type={"Hours"} isDanger={false} />
+          <p>:</p>
+          <DateTimeDisplay value={minutes} type={"Mins"} isDanger={false} />
+          <p>:</p>
+          <DateTimeDisplay value={seconds} type={"Seconds"} isDanger={false} />
+        </button>
+      </NavLink>
     </div>
   );
 };

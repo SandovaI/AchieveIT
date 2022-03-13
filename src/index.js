@@ -10,10 +10,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // components
 import App from "./App";
 import Game from "./components/Game/Game";
+import Upload from "./components/Game/Upload";
+import Challenges from "./components/Game/Challenges";
 // Wallet connection
 import WalletConnection from "./components/Wallet/WalletConnection";
 import reportWebVitals from "./reportWebVitals";
-
 function getLibrary(provider) {
   return new Web3(provider);
 }
@@ -24,7 +25,9 @@ ReactDOM.render(
       <Web3ReactProvider getLibrary={getLibrary}></Web3ReactProvider>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Home" element={<Game />} />
+        <Route path="/home" element={<Game />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/challenges" element={<Challenges />} />
       </Routes>
     </Router>
   </React.StrictMode>,

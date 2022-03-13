@@ -15,7 +15,7 @@
   align-items: center;
   // margin-left: auto;
   // margin-right: auto;
-  box-shadow: 1px 1px;
+  border-bottom: 1px solid rgba(34, 90, 89, 0.2);
 }
 .headerlogo {
   display: flex;
@@ -38,4 +38,9 @@
 }
 .countdown {
   display: flex;
+}
+.upload {
+  padding-top: 0.5rem;
+  width: 2rem;
+  height: 2rem;
 }

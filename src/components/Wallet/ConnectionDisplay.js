@@ -4,7 +4,7 @@ function ConnectionDisplay() {
   // uses for the web3 library
   const { account } = useWeb3React();
 
-  return <span>Wallet Address: {account}</span>;
+  return <p>Wallet Address: {account}</p>;
 }
 
 export default ConnectionDisplay;

@@ -24,6 +24,12 @@ COPY .expired-notice {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  background-color: green;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  color: white;
 }
 // .show-counter .countdown-link {
 //   display: flex;

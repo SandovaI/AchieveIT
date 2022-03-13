@@ -2,6 +2,7 @@ import styles from "./app.module.scss";
 import { NavLink } from "react-router-dom";
 import logo from "./logo.svg";
 import discord from "./assets/discord.svg";
+import trophy from "./assets/trophy.png";
 import WalletConnection from "./components/Wallet/WalletConnection";
 import ConnectionDisplay from "./components/Wallet/ConnectionDisplay";
 import NavButton from "./components/Nav-bar/NavButton";
@@ -11,7 +12,7 @@ function App() {
       <header className={styles.header}>
         <div className={styles.headerlogo}>
           <NavLink to="/">
-            <img className={styles.headerLogoIcon} src={logo} alt=""></img>
+            <img className={styles.headerLogoIcon} src={trophy} alt=""></img>
           </NavLink>
         </div>
 
@@ -36,7 +37,7 @@ function App() {
               alt="discord logo"
             ></img>
           </a>
-          <NavLink to="/Home">
+          <NavLink to="/home">
             <WalletConnection className={styles.rightItem} />
           </NavLink>
         </div>
@@ -47,10 +48,10 @@ function App() {
           <h1 className={styles.right}>IT</h1>
         </div>
         <div className={styles.background}>
-          <div className={styles.motto}>
+          <div id="About" className={styles.motto}>
             <p className={styles.mottoText}>ACHIEVE YOUR FULL POTENTIAL</p>
           </div>
-          <div id="About" className={styles.about}>
+          <div className={styles.about}>
             <div>
               <h1>What is AchieveIt?</h1>
             </div>
@@ -81,10 +82,9 @@ function App() {
               <h1>Our Team</h1>
             </div>
             <p>
-              Who are we? At achieve it we are an independently functioning
-              organization with hopes of changing the world of Web 3.0 forever.
-              As of right now we wish to remain anonymous but we hope you will
-              join us on this journey!
+              Who are we? We are a black and latino team in highschool solving
+              problems using blockchain technology. As of right now we wish to
+              remain anonymous but we hope you will join us on this journey!
             </p>
           </div>
         </div>
