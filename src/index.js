@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // components
 import App from "./App";
 import Game from "./components/Game/Game";
-import Upload from "./components/Game/Upload";
+import Upload from "./components/Game/Upload/Upload";
 import Challenges from "./components/Game/Challenges";
 // Wallet connection
 import WalletConnection from "./components/Wallet/WalletConnection";

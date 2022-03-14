@@ -14,7 +14,7 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="show-counter">
-      <NavLink to="/challenges">
+      <NavLink style={{ textDecoration: "none" }} to="/challenges">
         <button className="button">
           <DateTimeDisplay value={days} type={"Days"} isDanger={days <= 3} />
           <p>:</p>

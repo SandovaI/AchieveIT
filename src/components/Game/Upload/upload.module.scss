@@ -20,4 +20,12 @@
   padding-left: 1rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
+}
+Form {
+  display: flex;
+  flex-direction: column;
+}
+.formItem {
+  margin-bottom: 1rem;
 }
