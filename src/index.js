@@ -5,6 +5,8 @@ import "./index.css";
 //Libraries
 import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 //import Routers
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // components

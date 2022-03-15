@@ -6,6 +6,10 @@ import trophy from "./assets/trophy.png";
 import WalletConnection from "./components/Wallet/WalletConnection";
 import ConnectionDisplay from "./components/Wallet/ConnectionDisplay";
 import NavButton from "./components/Nav-bar/NavButton";
+import { Container, Row, Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import goggins from "./assets/goggins.png";
+import wim from "./assets/wim hof.png";
 function App() {
   return (
     <body className={styles.body}>
@@ -43,50 +47,72 @@ function App() {
         </div>
       </header>
       <main className={styles.main}>
-        <div className={styles.mainLogo}>
-          <h1 className={styles.left}>Achieve</h1>
-          <h1 className={styles.right}>IT</h1>
-        </div>
+        <Row>
+          <div className={styles.mainLogo}>
+            <h1 className={styles.left}>Achieve</h1>
+            <h1 className={styles.right}>IT</h1>
+          </div>
+        </Row>
         <div className={styles.background}>
-          <div id="About" className={styles.motto}>
-            <p className={styles.mottoText}>ACHIEVE YOUR FULL POTENTIAL</p>
-          </div>
-          <div className={styles.about}>
-            <div>
-              <h1>What is AchieveIt?</h1>
-            </div>
-            <p>
-              AchieveIT is the first ever Live Action challenge based game.
-              Users will be able to complete challenges to better their mental
-              and physical health and be rewarded for it. Users who rank high on
-              the leaderboards will be eligible to receive other rewards as
-              Well!
-            </p>
-          </div>
-
-          <div id="Roadmap" className={styles.roadmap}>
-            <div>
-              <h1>Roadmap</h1>
-            </div>
-            <p>
-              By the end of 2022 we want at least 1000 Beta-Testers on our site
-              as well as 10000 people in our community discord server.
-              Eventually we will have a team of people creating custom NFT’s for
-              top contenders on the leaderboard as well as people who are the
-              first to complete the challenge in their city/state/nation/world
-              etc. And by end of 2023 we want at least 400,000 users nationally.
-            </p>
-          </div>
-          <div id="Contact" className={styles.contact}>
-            <div>
-              <h1>Our Team</h1>
-            </div>
-            <p>
-              Who are we? We are a black and latino team in highschool solving
-              problems using blockchain technology. As of right now we wish to
-              remain anonymous but we hope you will join us on this journey!
-            </p>
-          </div>
+          <Container>
+            <Row className={styles.row}>
+              <div id="About" className={styles.motto}>
+                <p className={styles.mottoText}>ACHIEVE</p>
+                <p className={styles.mottoText}>YOUR FULL</p>
+                <p className={styles.mottoText}>POTENTIAL</p>
+              </div>
+            </Row>
+            <Row className={styles.row}>
+              <Col className={styles.col} md={6}>
+                <img src={goggins} alt=""></img>
+              </Col>
+              <Col md={6}>
+                <div className={styles.about}>
+                  <div>
+                    <h1>What is AchieveIt?</h1>
+                  </div>
+                  <p>
+                    AchieveIT is the first ever Live Action challenge based
+                    game. Users will be able to complete challenges to better
+                    their mental and physical health and be rewarded for it.
+                    Users who rank high on the leaderboards will be eligible to
+                    receive other rewards as Well!
+                  </p>
+                </div>
+              </Col>
+            </Row>
+            <Row className={styles.row}>
+              <Col md={6}>
+                <div className={styles.mission}>
+                  <div>
+                    <h1>Our Team</h1>
+                  </div>
+                  <p>
+                    Who are we? We are a black and latino team in highschool
+                    solving problems using blockchain technology. As of right
+                    now we wish to remain anonymous but we hope you will join us
+                    on this journey!
+                  </p>
+                </div>
+              </Col>
+              <Col className={styles.col} md={6}>
+                <img src={wim} alt=""></img>
+              </Col>
+            </Row>
+            <Row>
+              <div id="Contact" className={styles.contact}>
+                <div>
+                  <h1>Our Team</h1>
+                </div>
+                <p>
+                  Who are we? We are a black and latino team in highschool
+                  solving problems using blockchain technology. As of right now
+                  we wish to remain anonymous but we hope you will join us on
+                  this journey!
+                </p>
+              </div>
+            </Row>
+          </Container>
         </div>
       </main>
       <footer>
