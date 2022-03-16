@@ -1,9 +1,13 @@
 .button {
-  background-color: white;
+  background-color: orange;
   border: none;
-  color: orange;
+  color: white;
+  font-family: Montserrat;
   font-size: 20px;
-  border-radius: 3px;
-  padding: 0.5rem;
+  font-weight: 900;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 180%;
+  height: 130%;
   cursor: pointer;
 }

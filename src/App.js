@@ -42,9 +42,6 @@ function App() {
               alt="discord logo"
             ></img>
           </a>
-          <NavLink to="/home">
-            <WalletConnection className={styles.rightItem} />
-          </NavLink>
         </div>
       </header>
       <main className={styles.main}>
@@ -73,11 +70,10 @@ function App() {
                     <h1>What is AchieveIt?</h1>
                   </div>
                   <p>
-                    AchieveIT is the first ever Live Action challenge based
-                    game. Users will be able to complete challenges to better
-                    their mental and physical health and be rewarded for it.
-                    Users who rank high on the leaderboards will be eligible to
-                    receive other rewards as Well!
+                    AchieveIT is the first ever Web 3 live action challenge
+                    based game. Users will be able to complete real life
+                    challenges to improve their discipline in exchange for
+                    crypto currency and NFT's
                   </p>
                 </div>
               </Col>
@@ -100,13 +96,13 @@ function App() {
                 <img src={wim} alt=""></img>
               </Col>
             </Row>
-            <Row className={styles.row}>
+            <Row id="Roadmap" className={styles.row}>
               <div className={styles.roadmaptext}>
                 <h1>Roadmap</h1>
               </div>
               <img src={roadmap} className={styles.roadmapImage} alt=""></img>
             </Row>
-            <Row>
+            <Row className={styles.row}>
               <div className={styles.team}>
                 <div>
                   <h1>Our Team</h1>
@@ -114,16 +110,24 @@ function App() {
                 <p>
                   Who are we? We are a Black and Latino team in highschool
                   solving problems using blockchain technology. We are driven to
-                  be disciplined and we want to spread this attitude so everyboy
+                  be disciplined and want to spread this attitude so everybody
                   can Achieve It!
                 </p>
               </div>
             </Row>
+            <div className={styles.join}>
+              <p className={styles.jointext}>ARE YOU READY TO ACHIEVE IT?</p>
+              <NavLink to="/home">
+                <WalletConnection />
+              </NavLink>
+            </div>
           </Container>
         </div>
       </main>
-      <footer>
-        {/* <a href="https://discord.gg/u9MGrMH5ms">discord</a> */}
+      <footer id="Contact" className={styles.footer}>
+        <div className={styles.b}>
+          <div>yo</div>
+        </div>
       </footer>
     </body>
   );

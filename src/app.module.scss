@@ -96,12 +96,16 @@
   -webkit-text-stroke: 2px white;
 }
 .background {
-  // background-image: url(./assets/black-vector.svg);
+  //background-image: url(./assets/black-vector.svg);
   // display: flex;
   // flex-direction: column;
   // justify-content: space-around;
   padding-top: 5rem;
-  background-color: #333333;
+  background-image: linear-gradient(
+    176deg,
+    #333333 95%,
+    transparent calc(70% + 2px)
+  );
 }
 .motto {
   font-family: Montserrat;
@@ -109,6 +113,7 @@
   font-style: normal;
   font-size: 116px;
 }
+
 .about {
   display: flex;
   flex-direction: column;
@@ -179,7 +184,7 @@
 .row {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   .roadmaptext {
     display: flex;
     justify-content: center;
@@ -205,5 +210,18 @@
   width: 85%;
   height: 85%;
 }
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jointext {
+  font-family: Montserrat;
+  color: white;
+  font-style: normal;
+  font-size: 116px;
+  text-align: center;
+}
+
 .footer {
 }
