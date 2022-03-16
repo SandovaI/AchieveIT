@@ -10,6 +10,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import goggins from "./assets/goggins.png";
 import wim from "./assets/wim hof.png";
+import roadmap from "./assets/roadmap.png";
 function App() {
   return (
     <body className={styles.body}>
@@ -66,7 +67,7 @@ function App() {
               <Col className={styles.col} md={6}>
                 <img src={goggins} alt=""></img>
               </Col>
-              <Col md={6}>
+              <Col className={styles.col} md={6}>
                 <div className={styles.about}>
                   <div>
                     <h1>What is AchieveIt?</h1>
@@ -82,16 +83,16 @@ function App() {
               </Col>
             </Row>
             <Row className={styles.row}>
-              <Col md={6}>
+              <Col className={styles.col} md={6}>
                 <div className={styles.mission}>
                   <div>
-                    <h1>Our Team</h1>
+                    <h1>Our Mission</h1>
                   </div>
                   <p>
-                    Who are we? We are a black and latino team in highschool
-                    solving problems using blockchain technology. As of right
-                    now we wish to remain anonymous but we hope you will join us
-                    on this journey!
+                    We want to incentivize people to build discipline, grasp
+                    inner potential, and leave the comfort of the 21st century.
+                    We want to motivate people to reclaim their life in this
+                    world of distraction.
                   </p>
                 </div>
               </Col>
@@ -99,16 +100,22 @@ function App() {
                 <img src={wim} alt=""></img>
               </Col>
             </Row>
+            <Row className={styles.row}>
+              <div className={styles.roadmaptext}>
+                <h1>Roadmap</h1>
+              </div>
+              <img src={roadmap} className={styles.roadmapImage} alt=""></img>
+            </Row>
             <Row>
-              <div id="Contact" className={styles.contact}>
+              <div className={styles.team}>
                 <div>
                   <h1>Our Team</h1>
                 </div>
                 <p>
-                  Who are we? We are a black and latino team in highschool
-                  solving problems using blockchain technology. As of right now
-                  we wish to remain anonymous but we hope you will join us on
-                  this journey!
+                  Who are we? We are a Black and Latino team in highschool
+                  solving problems using blockchain technology. We are driven to
+                  be disciplined and we want to spread this attitude so everyboy
+                  can Achieve It!
                 </p>
               </div>
             </Row>
@@ -116,7 +123,7 @@ function App() {
         </div>
       </main>
       <footer>
-        <a href="https://discord.gg/u9MGrMH5ms">discord</a>
+        {/* <a href="https://discord.gg/u9MGrMH5ms">discord</a> */}
       </footer>
     </body>
   );
