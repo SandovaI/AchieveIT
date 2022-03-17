@@ -46,9 +46,11 @@ function App() {
       </header>
       <main className={styles.main}>
         <Row>
-          <div className={styles.mainLogo}>
-            <h1 className={styles.left}>Achieve</h1>
-            <h1 className={styles.right}>IT</h1>
+          <div className={styles.mainLogoContainer}>
+            <div className={styles.mainLogo}>
+              <h1 className={styles.left}>Achieve</h1>
+              <h1 className={styles.right}>IT</h1>
+            </div>
           </div>
         </Row>
         <div className={styles.background}>
@@ -125,9 +127,23 @@ function App() {
         </div>
       </main>
       <footer id="Contact" className={styles.footer}>
-        <div className={styles.b}>
-          <div>yo</div>
-        </div>
+        <Container>
+          <Row>
+            <Col className={styles.footerCol} md={4}>
+              <a href="">FAQ</a>
+              <a href="">Contact Us</a>
+            </Col>
+            <Col className={styles.footerCol} md={4}>
+              <a href="">About</a>
+              <a href="">Our Newsletter</a>
+            </Col>
+            <Col className={styles.footerCol} md={4}>
+              <a href="">Discord</a>
+              <a href="">Instagram</a>
+              <a href="">Twitter</a>
+            </Col>
+          </Row>
+        </Container>
       </footer>
     </body>
   );

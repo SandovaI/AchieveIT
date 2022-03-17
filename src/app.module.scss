@@ -78,8 +78,16 @@
   padding-left: 3rem;
   //margin-bottom: 3rem;
   display: flex;
+  //transform: rotate(180deg) scaleX(-1);
+  background-image: linear-gradient(
+    190deg,
+    #333333 40%,
+    transparent calc(40% + 2px)
+  );
 }
 .mainLogo .left {
+  //transform: rotate(180deg) scaleX(-1);
+
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -88,6 +96,8 @@
   -webkit-text-fill-color: transparent;
 }
 .mainLogo .right {
+  // transform: rotate(180deg) scaleX(-1);
+
   font-family: Montserrat;
   color: white;
   font-style: normal;
@@ -101,6 +111,8 @@
   // flex-direction: column;
   // justify-content: space-around;
   padding-top: 5rem;
+  //transform: rotate(180deg) scaleX(-1);
+  background-color: #333333;
   background-image: linear-gradient(
     176deg,
     #333333 95%,
@@ -214,6 +226,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 4rem;
 }
 .jointext {
   font-family: Montserrat;
@@ -224,4 +237,18 @@
 }
 
 .footer {
+  padding-top: 2rem;
+  background-color: #333333;
+  border-top: 0.1rem solid #ffffff;
+  .footerCol {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      font-family: Montserrat;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
 }
