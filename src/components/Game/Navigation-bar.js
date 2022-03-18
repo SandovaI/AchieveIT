@@ -23,18 +23,16 @@ function Navigation() {
         className={styles.countdown}
         targetDate={dateTimeAfterDays}
       />
-      <nav className={styles.nav}>
-        <ul className={styles.navitems}>
-          <li className={styles.navitem}>
-            <NavLink to="/upload">
-              <img className={styles.upload} src={upload} alt=""></img>
-            </NavLink>
-          </li>
-          <li className={styles.navitem}>
-            <ConnectionDisplay />
-          </li>
-        </ul>
-      </nav>
+      <ul className={styles.navitems}>
+        <li className={styles.navitem}>
+          <NavLink to="/upload">
+            <img className={styles.upload} src={upload} alt=""></img>
+          </NavLink>
+        </li>
+        <li className={styles.navitem}>
+          <ConnectionDisplay className={styles.display} />
+        </li>
+      </ul>
     </header>
   );
 }

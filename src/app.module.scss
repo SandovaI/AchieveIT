@@ -79,11 +79,6 @@
   //margin-bottom: 3rem;
   display: flex;
   //transform: rotate(180deg) scaleX(-1);
-  background-image: linear-gradient(
-    190deg,
-    #333333 40%,
-    transparent calc(40% + 2px)
-  );
 }
 .mainLogo .left {
   //transform: rotate(180deg) scaleX(-1);
@@ -111,15 +106,19 @@
   // flex-direction: column;
   // justify-content: space-around;
   padding-top: 5rem;
-  //transform: rotate(180deg) scaleX(-1);
-  background-color: #333333;
+  transform: rotate(180deg) scaleX(-1);
+
   background-image: linear-gradient(
-    176deg,
+    175deg,
     #333333 95%,
-    transparent calc(70% + 2px)
+    transparent calc(95% + 2px)
   );
 }
+.content {
+  transform: rotate(180deg) scaleX(-1);
+}
 .motto {
+  padding-top: 6rem;
   font-family: Montserrat;
   color: white;
   font-style: normal;
