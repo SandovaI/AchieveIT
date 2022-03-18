@@ -1,9 +1,9 @@
 import { injected } from "./Connector";
 import { useWeb3React } from "@web3-react/core";
-
+import styles from "./wallet.module.scss";
 function WalletConnection() {
   // uses for the web3 library
-  const { account, activate, deactivate } = useWeb3React();
+  const { activate, deactivate } = useWeb3React();
 
   async function connect() {
     try {
@@ -22,13 +22,9 @@ function WalletConnection() {
   }
 
   return (
-    <div>
-      <button type="button" onClick={connect}>
-        Connect Wallet
-      </button>
-      <h1>Wallet Addres: {account} </h1>
-    </div>
+    <button className={styles.button} type="button" onClick={connect}>
+      Start
+    </button>
   );
 }
-
 export default WalletConnection;

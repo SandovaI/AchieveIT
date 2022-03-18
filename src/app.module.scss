@@ -1,0 +1,253 @@
+.body {
+  height: 100%;
+  background: linear-gradient(
+    169.24deg,
+    #ff9900 0%,
+    #ffc700 41.19%,
+    #ff9200 55.67%,
+    #ff2e00 82.91%
+  );
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navitems {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.navitem {
+  margin-left: 3rem;
+  list-style-type: none;
+}
+.rightHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rightItem {
+  width: 50%;
+  height: 50%;
+}
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.headerlogo {
+  display: flex;
+  margin-left: -6rem;
+}
+.headerLogoIcon {
+  width: 3.5rem;
+  height: 3rem;
+}
+.headerLogoText {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.isConnected {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 0.5rem;
+}
+.countdown {
+  display: flex;
+}
+.main {
+  // display: flex;
+  // flex-direction: column;
+}
+.mainLogo {
+  padding-left: 3rem;
+  //margin-bottom: 3rem;
+  display: flex;
+  //transform: rotate(180deg) scaleX(-1);
+}
+.mainLogo .left {
+  //transform: rotate(180deg) scaleX(-1);
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 144px;
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+}
+.mainLogo .right {
+  // transform: rotate(180deg) scaleX(-1);
+
+  font-family: Montserrat;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 144px;
+  -webkit-text-stroke: 2px white;
+}
+.background {
+  //background-image: url(./assets/black-vector.svg);
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  padding-top: 5rem;
+  transform: rotate(180deg) scaleX(-1);
+
+  background-image: linear-gradient(
+    175deg,
+    #333333 95%,
+    transparent calc(95% + 2px)
+  );
+}
+.content {
+  transform: rotate(180deg) scaleX(-1);
+}
+.motto {
+  padding-top: 6rem;
+  font-family: Montserrat;
+  color: white;
+  font-style: normal;
+  font-size: 116px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 53px;
+    color: #ffffff;
+  }
+
+  p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+.mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 53px;
+    color: #ffffff;
+  }
+
+  p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    justify-content: flex-start;
+    h1 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 53px;
+      color: #ffffff;
+    }
+  }
+
+  p {
+    width: 100%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: default;
+  }
+}
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+  .roadmaptext {
+    display: flex;
+    justify-content: center;
+    h1 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 53px;
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+  }
+}
+.col {
+  img {
+    width: 95%;
+    height: 95%;
+  }
+  display: flex;
+  align-items: center;
+}
+.roadmapImage {
+  width: 85%;
+  height: 85%;
+}
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+.jointext {
+  font-family: Montserrat;
+  color: white;
+  font-style: normal;
+  font-size: 116px;
+  text-align: center;
+}
+
+.footer {
+  padding-top: 2rem;
+  background-color: #333333;
+  border-top: 0.1rem solid #ffffff;
+  .footerCol {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      font-family: Montserrat;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}

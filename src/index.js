@@ -5,18 +5,18 @@ import "./index.css";
 //Libraries
 import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 //import Routers
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // components
 import App from "./App";
-import Navigation from "./components/Nav-bar/Navigation-bar.js";
-import About from "./components/Nav-bar/About.js";
-import Contact from "./components/Nav-bar/Contact.js";
-import Roadmap from "./components/Nav-bar/Roadmap.js";
+import Game from "./components/Game/Game";
+import Upload from "./components/Game/Upload/Upload";
+import Challenges from "./components/Game/Challenges";
 // Wallet connection
 import WalletConnection from "./components/Wallet/WalletConnection";
 import reportWebVitals from "./reportWebVitals";
-
 function getLibrary(provider) {
   return new Web3(provider);
 }
@@ -24,17 +24,14 @@ function getLibrary(provider) {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Navigation />
+      <Web3ReactProvider getLibrary={getLibrary}></Web3ReactProvider>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Roadmap" element={<Roadmap />} />
+        <Route path="/home" element={<Game />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/challenges" element={<Challenges />} />
       </Routes>
     </Router>
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <WalletConnection />
-    </Web3ReactProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
