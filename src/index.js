@@ -15,7 +15,7 @@ import Game from "./components/Game/Game";
 import Upload from "./components/Game/Upload/Upload";
 import Challenges from "./components/Game/Challenges";
 // Wallet connection
-import WalletConnection from "./components/Wallet/WalletConnection";
+//import WalletConnection from "./components/Wallet/WalletConnection";
 import reportWebVitals from "./reportWebVitals";
 function getLibrary(provider) {
   return new Web3(provider);

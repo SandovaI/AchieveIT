@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import styles from "./nav.module.scss";
 import logo from "../../logo.svg";
 import upload from "../../assets/upload.png";
-import WalletConnection from "../Wallet/WalletConnection";
 import ConnectionDisplay from "../Wallet/ConnectionDisplay";
 import CountdownTimer from "../Countdown/CountdownTimer";
 function Navigation() {

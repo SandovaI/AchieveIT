@@ -73,7 +73,7 @@ function App() {
                       <h1>What is AchieveIt?</h1>
                     </div>
                     <p>
-                      AchieveIT is the first ever Web 3 live action challenge
+                      AchieveIT is the first ever Web 3 real life challenge
                       based game. Users will be able to complete real life
                       challenges to improve their discipline in exchange for
                       crypto currency and NFT's
@@ -120,7 +120,7 @@ function App() {
               </Row>
               <div className={styles.join}>
                 <p className={styles.jointext}>ARE YOU READY TO ACHIEVE IT?</p>
-                <NavLink to="/home">
+                <NavLink to="/challenges">
                   <WalletConnection />
                 </NavLink>
               </div>
