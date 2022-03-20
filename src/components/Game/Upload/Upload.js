@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./upload.module.scss";
 import Navigation from "../Navigation-bar";
 import Form from "react-bootstrap/Form";
-import UploadFile from "./uploadfile";
+import UploadFile from "./UploadFile";
 const Upload = () => {
   return (
     <body>

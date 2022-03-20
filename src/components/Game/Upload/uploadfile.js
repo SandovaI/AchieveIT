@@ -1,80 +1,52 @@
 import axios from "axios";
 
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+// import {storage} from '../../../firebase'
 
-class UploadFile extends Component {
-  state = {
-    // Initially, no file is selected
-    selectedFile: null,
-  };
+import storage from '../../../firebase';
 
-  // On file select (from the pop up)
-  onFileChange = (event) => {
-    // Update the state
-    this.setState({ selectedFile: event.target.files[0] });
-  };
+const UploadFile = () => {
+  const [file, setFile] = useState('');
+  const [url, setUrl] = useState('');
 
-  // On file upload (click the upload button)
-  onFileUpload = () => {
-    // Create an object of formData
-    const formData = new FormData();
+  function handleUpload(e) {
+    setFile(e.target.files[0]);
+  }
 
-    // Update the formData object
-    formData.append(
-      "myFile",
-      this.state.selectedFile,
-      this.state.selectedFile.name
-    );
-
-    // Details of the uploaded file
-    console.log(this.state.selectedFile);
-
-    // Request made to the backend api
-    // Send formData object
-    axios.post("api/uploadfile", formData);
-  };
-
-  // File content to be displayed after
-  // file upload is complete
-  fileData = () => {
-    if (this.state.selectedFile) {
-      return (
-        <div>
-          <h2>File Details:</h2>
-
-          <p>File Name: {this.state.selectedFile.name}</p>
-
-          <p>File Type: {this.state.selectedFile.type}</p>
-
-          <p>
-            Last Modified:{" "}
-            {this.state.selectedFile.lastModifiedDate.toDateString()}
-          </p>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <br />
-          <h4>Choose before Pressing the Upload button</h4>
-        </div>
-      );
+  // uploads file to firebase
+  const upload = (e) => {
+    e.preventDefault();
+    if(file == null){
+      return;
     }
-  };
 
-  render() {
+    const ref = storage.ref(`/images/${file.name}`);
+    const uploadTask = ref.put(file);
+    uploadTask.on("stage_changed", alert("success"), alert, () => {
+      ref.getDownloadURL().then((url) => {
+        setFile(null);
+        setUrl(url);
+      })
+    })
+
+    // storage.ref(`/images/${file.name}`).put(file).on("state_changed", alert("success"), alert);
+  }
+
+
+
     return (
       <div>
-        <h1>GeeksforGeeks</h1>
+        <h1>Miguel's uploading</h1>
         <h3>File Upload using React!</h3>
         <div>
-          <input type="file" onChange={this.onFileChange} />
-          <button onClick={this.onFileUpload}>Upload!</button>
+          <input type="file" onChange={handleUpload} />
+          <button onClick={upload}>Upload!</button>
         </div>
-        {this.fileData()}
+        <img src={url} alt="upload" width={150} height={150}/>
+        {/* {this.fileData()} */}
       </div>
     );
-  }
+  
 }
 
 export default UploadFile;
