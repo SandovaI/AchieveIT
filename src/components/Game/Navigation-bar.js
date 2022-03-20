@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./nav.module.scss";
 import logo from "../../logo.svg";
+import OrangeTrophy from "../../assets/orange_trophy.png";
 import upload from "../../assets/upload.png";
 import ConnectionDisplay from "../Wallet/ConnectionDisplay";
 import CountdownTimer from "../Countdown/CountdownTimer";
@@ -11,27 +12,34 @@ function Navigation() {
   const dateTimeAfterDays = NOW + DAYS;
   return (
     <header className={styles.header}>
-      <div className={styles.headerlogo}>
-        <NavLink to="/">
-          <img className={styles.headerLogoIcon} src={logo} alt=""></img>
-        </NavLink>
-        <h1 className={styles.headerLogoText}>Achieve IT</h1>
-        <div className={styles.isConnected}></div>
+      <div className={styles.headerLogo}>
+        <div className={styles.leftitem}>
+          <NavLink to="/">
+            <img
+              className={styles.headerLogoIcon}
+              src={OrangeTrophy}
+              alt=""
+            ></img>
+          </NavLink>
+        </div>
+        <div className={styles.leftitem}>
+          <h1 className={styles.logoText}>AchieveIT</h1>
+        </div>
       </div>
       <CountdownTimer
         className={styles.countdown}
         targetDate={dateTimeAfterDays}
       />
-      <ul className={styles.navitems}>
-        <li className={styles.navitem}>
+      <div className={styles.navitems}>
+        <div className={styles.navitem}>
           <NavLink to="/upload">
             <img className={styles.upload} src={upload} alt=""></img>
           </NavLink>
-        </li>
-        <li className={styles.navitem}>
+        </div>
+        <div className={styles.navitem}>
           <ConnectionDisplay className={styles.display} />
-        </li>
-      </ul>
+        </div>
+      </div>
     </header>
   );
 }
