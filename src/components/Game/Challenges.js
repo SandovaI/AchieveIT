@@ -27,8 +27,6 @@ function Challenges() {
               <button className={styles.button}>25 Pushups</button>
             </NavLink>
           </Row>
-          <br></br>
-          <br></br>
         </Container>
       </main>
     </div>
