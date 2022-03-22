@@ -98,6 +98,7 @@ const Dropzone = (props) => {
     uploadTask.on("stage_changed", alert("success"), alert, () => {
       ref.getDownloadURL().then((url) => {
         setDocument(null);
+        setFiles(null);
         setUrl(url);
       });
     });

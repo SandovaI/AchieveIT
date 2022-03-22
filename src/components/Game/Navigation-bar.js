@@ -6,10 +6,20 @@ import OrangeTrophy from "../../assets/orange_trophy.png";
 import upload from "../../assets/upload.png";
 import ConnectionDisplay from "../Wallet/ConnectionDisplay";
 import CountdownTimer from "../Countdown/CountdownTimer";
+
+import { Web3ReactProvider } from "@web3-react/core";
+import WalletConnection from "../Wallet/WalletConnection";
+import Web3 from "web3";
+
 function Navigation() {
   const DAYS = 1 * 24 * 60 * 60 * 1000;
   const NOW = new Date().getTime();
   const dateTimeAfterDays = NOW + DAYS;
+
+  function getLibrary(provider) {
+    return new Web3(provider);
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.headerLogo}>
@@ -37,7 +47,14 @@ function Navigation() {
           </NavLink>
         </div>
         <div className={styles.navitem}>
-          <ConnectionDisplay className={styles.display} />
+          {/* <Web3ReactProvider getLibrary={getLibrary}>
+            <ConnectionDisplay className={styles.display} />
+          </Web3ReactProvider> */}
+
+          <Web3ReactProvider getLibrary={getLibrary}>
+            <WalletConnection />
+          </Web3ReactProvider>
+
         </div>
       </div>
     </header>

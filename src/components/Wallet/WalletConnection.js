@@ -1,6 +1,7 @@
 import { injected } from "./Connector";
 import { useWeb3React } from "@web3-react/core";
 import styles from "./wallet.module.scss";
+
 function WalletConnection() {
   // uses for the web3 library
   const { activate, deactivate } = useWeb3React();
