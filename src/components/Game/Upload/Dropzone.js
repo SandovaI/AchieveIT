@@ -1,4 +1,6 @@
 import React, { useCallback, useState, useRef } from "react";
+import styles from "./dropzone.module.scss";
+
 import { useDropzone } from "react-dropzone";
 import { db, storage } from "../../../firebase";
 import {
@@ -10,13 +12,21 @@ import {
   doc,
 } from "firebase/firestore";
 import { ref, getDownloadURL, uploadBytes } from "@firebase/storage";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import { Container, Row, Col } from "react-bootstrap";
+import Post from "../Post/Post";
 
 const Dropzone = () => {
   const [selectedImages, setSelectedImages] = useState([]);
   const captionRef = useRef(null);
+  const challengeRef = useRef(null);
+  const [description, setDescription] = useState("Select a video to upload");
+
   const uploadPost = async () => {
     const docRef = await addDoc(collection(db, "posts"), {
       caption: captionRef.current.value,
+      challenge: challengeRef.current.value,
       timestamp: serverTimestamp(),
     });
     await Promise.all(
@@ -31,6 +41,7 @@ const Dropzone = () => {
       })
     );
     captionRef.current.value = "";
+    setDescription("");
     setSelectedImages([]);
   };
   console.log("db", db);
@@ -47,19 +58,62 @@ const Dropzone = () => {
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
   const selected_images = selectedImages?.map((file) => (
     <div>
-      <img src={file.preview} styles={{ width: "200px" }} alt="" />
+      {/* <img src={file.preview} styles={{ width: "100px" }} alt="" /> */}
+      <video width="400" controls>
+        <source src={file.preview} />
+      </video>
     </div>
   ));
   return (
-    <div>
-      <div {...getRootProps()}>
-        <input {...getInputProps()} />
-        <p>Drop the files here ...</p>
-      </div>
-      <input ref={captionRef} type="text" placeholder="Caption" />
-      <button onClick={uploadPost}>Post</button>
+    <Container>
+      <Row className={styles.title}>
+        <h1>Upload Video</h1>
+        <p>Post a video for a challenge</p>
+      </Row>
+      <Row>
+        <Col md={5}>
+          <div className={styles.uploadCard} {...getRootProps()}>
+            <input {...getInputProps()} />
+            <h5>{description}</h5>
+            <p>Or drag and drop a file</p>
+            <Button
+              className={styles.button}
+              onClick={uploadPost}
+              variant="warning"
+            >
+              Select File
+            </Button>
+          </div>
+        </Col>
+        <Col md={7} className={styles.col}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Caption</Form.Label>
+            <Form.Control type="email" ref={captionRef} />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Challenge</Form.Label>
+            <Form.Select ref={challengeRef}>
+              <option>Ice Bath</option>
+              <option>Mile Run</option>
+              <option>25 Pushups</option>
+            </Form.Select>
+          </Form.Group>
+
+          <Button
+            className={styles.button}
+            onClick={uploadPost}
+            variant="warning"
+          >
+            Post
+          </Button>
+        </Col>
+      </Row>
+
+      <Post />
+      <h1>Preview</h1>
       {selected_images}
-    </div>
+    </Container>
   );
 };
 export default Dropzone;

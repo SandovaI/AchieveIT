@@ -36,7 +36,6 @@ const Posts = () => {
             <div className="">{postImages(post)}</div>
           </div>
           <p> {moment(post.timestamp).fromNow()}</p>
-          {postImages(post)}
         </div>
       ))}
     </div>
