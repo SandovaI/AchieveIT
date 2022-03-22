@@ -12,8 +12,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // components
 import App from "./App";
 import Game from "./components/Game/Game";
-import Upload from "./components/Game/Upload/Upload";
+import Upload from "./components/Game/Upload/UploadFile";
 import Challenges from "./components/Game/Challenges";
+import Post from "./components/Game/Post/Post";
 // Wallet connection
 //import WalletConnection from "./components/Wallet/WalletConnection";
 import reportWebVitals from "./reportWebVitals";
@@ -30,6 +31,7 @@ ReactDOM.render(
         <Route path="/home" element={<Game />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/challenges" element={<Challenges />} />
+        <Route path="/post" element={<Post />} />
       </Routes>
     </Router>
   </React.StrictMode>,

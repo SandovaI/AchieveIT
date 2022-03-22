@@ -1,0 +1,34 @@
+.uploadCard {
+  width: 260px;
+  height: 458px;
+  border: 2px dashed rgba(22, 24, 35, 0.2);
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 0%;
+}
+.button {
+  background-color: #ff9900;
+  color: white;
+}
+.title {
+  h1 {
+    padding-left: 0.5rem;
+  }
+  p {
+    padding-left: 0.8rem;
+  }
+}
+
+.fileText {
+}
