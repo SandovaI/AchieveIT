@@ -2,13 +2,20 @@ import React, { useEffect, useState } from "react";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../../firebase";
 import moment from "moment";
+import styles from "./post.module.scss";
 const Posts = () => {
   const [post, setPosts] = useState([]);
   const postImages = (post) => {
     const post_images = post.images?.map((file) => (
-      <div className="">
-        <img src={file} alt="" />
-      </div>
+      <video
+        className={styles.video}
+        width="259px"
+        height="486px"
+        controls
+        autoplay
+      >
+        <source src={file} />
+      </video>
     ));
     return post_images;
   };
@@ -27,17 +34,28 @@ const Posts = () => {
     return unsubscribe;
   }, []);
   return (
-    <div>
-      {" "}
-      {post.map((post) => (
-        <div>
-          <div key={post.id}>
-            <div className=""> {post.caption}</div>
-            <div className="">{postImages(post)}</div>
+    <div className={styles.div}>
+      <div>
+        {post.map((post) => (
+          <div className={styles.post}>
+            <div key={post.id}>
+              <h5
+                className={styles.challenge}
+              >{`${post.challenge} Challenge!`}</h5>
+              <div className={styles.postContainer}>
+                <div className={styles.align}>
+                  <h6 className={styles.address}>Address:</h6>
+                  <div className={styles.caption}>{post.caption}</div>
+                  {postImages(post)}
+                </div>
+              </div>
+            </div>
+            <p className={styles.timestamp}>
+              {moment(post.timestamp).fromNow()}
+            </p>
           </div>
-          <p> {moment(post.timestamp).fromNow()}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

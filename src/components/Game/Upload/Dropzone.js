@@ -16,12 +16,13 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col } from "react-bootstrap";
 import Post from "../Post/Post";
-
+import MyVerticallyCenteredModal from "./modal";
 const Dropzone = () => {
   const [selectedImages, setSelectedImages] = useState([]);
   const captionRef = useRef(null);
   const challengeRef = useRef(null);
   const [description, setDescription] = useState("Select a video to upload");
+  const [modalShow, setModalShow] = React.useState(false);
 
   const uploadPost = async () => {
     const docRef = await addDoc(collection(db, "posts"), {
@@ -43,6 +44,10 @@ const Dropzone = () => {
     captionRef.current.value = "";
     setDescription("");
     setSelectedImages([]);
+    modal();
+  };
+  const modal = () => {
+    setModalShow(true);
   };
   console.log("db", db);
   console.log("storage", storage);
@@ -59,7 +64,7 @@ const Dropzone = () => {
   const selected_images = selectedImages?.map((file) => (
     <div>
       {/* <img src={file.preview} styles={{ width: "100px" }} alt="" /> */}
-      <video width="400" controls>
+      <video className={styles.video} width="259px" height="486px" controls>
         <source src={file.preview} />
       </video>
     </div>
@@ -107,10 +112,13 @@ const Dropzone = () => {
           >
             Post
           </Button>
+          <MyVerticallyCenteredModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </Col>
       </Row>
 
-      <Post />
       <h1>Preview</h1>
       {selected_images}
     </Container>
