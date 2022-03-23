@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./nav.module.scss";
-import logo from "../../logo.svg";
 import OrangeTrophy from "../../assets/orange_trophy.png";
 import upload from "../../assets/upload.png";
 import ConnectionDisplay from "../Wallet/ConnectionDisplay";

@@ -15,7 +15,6 @@ import { ref, getDownloadURL, uploadBytes } from "@firebase/storage";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col } from "react-bootstrap";
-import Post from "../Post/Post";
 import MyVerticallyCenteredModal from "./modal";
 const Dropzone = () => {
   const [selectedImages, setSelectedImages] = useState([]);

@@ -12,7 +12,7 @@ const Posts = () => {
         width="259px"
         height="486px"
         controls
-        autoplay
+        autoPlay
       >
         <source src={file} />
       </video>

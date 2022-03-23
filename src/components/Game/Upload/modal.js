@@ -18,7 +18,9 @@ function MyVerticallyCenteredModal(props) {
       </Modal.Header>
       <Modal.Footer>
         <NavLink to="/home">
-          <Button onClick={props.onHide}>Continue</Button>
+          <Button variant="warning" onClick={props.onHide}>
+            Continue
+          </Button>
         </NavLink>
       </Modal.Footer>
     </Modal>
