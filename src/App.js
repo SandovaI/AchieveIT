@@ -1,16 +1,28 @@
 import styles from "./app.module.scss";
-import { NavLink } from "react-router-dom";
-import logo from "./logo.svg";
-import discord from "./assets/discord.svg";
-import trophy from "./assets/trophy.png";
+
+//Components
 import WalletConnection from "./components/Wallet/WalletConnection";
-import ConnectionDisplay from "./components/Wallet/ConnectionDisplay";
 import NavButton from "./components/Nav-bar/NavButton";
+
+//Libraries
+import { NavLink } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+
+//Assets
 import goggins from "./assets/goggins.png";
 import wim from "./assets/wim hof.png";
 import roadmap from "./assets/roadmap.png";
+import discord from "./assets/discord.svg";
+import trophy from "./assets/trophy.png";
+
+//Web3
+import { Web3ReactProvider } from "@web3-react/core";
+import Web3 from "web3";
+
+function getLibrary(provider) {
+  return new Web3(provider);
+}
+
 function App() {
   return (
     <body className={styles.body}>
@@ -121,7 +133,9 @@ function App() {
               <div className={styles.join}>
                 <p className={styles.jointext}>ARE YOU READY TO ACHIEVE IT?</p>
                 <NavLink to="/challenges">
-                  <WalletConnection />
+                  <Web3ReactProvider getLibrary={getLibrary}>
+                    <WalletConnection />
+                  </Web3ReactProvider>
                 </NavLink>
               </div>
             </Container>

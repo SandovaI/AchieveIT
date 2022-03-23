@@ -37,7 +37,7 @@ function Navigation() {
           </NavLink>
         </div>
         <div className={styles.navitem}>
-          <ConnectionDisplay className={styles.display} />
+          <ConnectionDisplay />
         </div>
       </div>
     </header>
