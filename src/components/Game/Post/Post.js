@@ -3,6 +3,7 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../../firebase";
 import moment from "moment";
 import styles from "./post.module.scss";
+import ConnectionDisplay from "../../Wallet/ConnectionDisplay";
 const Posts = () => {
   const [post, setPosts] = useState([]);
   const postImages = (post) => {
@@ -44,7 +45,7 @@ const Posts = () => {
               >{`${post.challenge} Challenge!`}</h5>
               <div className={styles.postContainer}>
                 <div className={styles.align}>
-                  <h6 className={styles.address}>Address:</h6>
+                  <ConnectionDisplay className={styles.address} />
                   <div className={styles.caption}>{post.caption}</div>
                   {postImages(post)}
                 </div>
