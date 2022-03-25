@@ -88,7 +88,7 @@ function Mint() {
   const mintNftButton = () => {
     return (
       <button onClick={mintNftHandler} className="cta-button mint-nft-button">
-        Mint NFT
+        Start
       </button>
     );
   };
