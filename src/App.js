@@ -16,13 +16,7 @@ import discord from "./assets/discord.svg";
 import trophy from "./assets/trophy.png";
 
 //Web3
-import { Web3ReactProvider } from "@web3-react/core";
-import Web3 from "web3";
-
-function getLibrary(provider) {
-  return new Web3(provider);
-}
-
+import Mint from "./components/Wallet/connectMint";
 function App() {
   return (
     <body className={styles.body}>
@@ -132,10 +126,8 @@ function App() {
               </Row>
               <div className={styles.join}>
                 <p className={styles.jointext}>ARE YOU READY TO ACHIEVE IT?</p>
-                <NavLink to="/challenges">
-                  <Web3ReactProvider getLibrary={getLibrary}>
-                    <WalletConnection />
-                  </Web3ReactProvider>
+                <NavLink to="/upload">
+                  <Mint />
                 </NavLink>
               </div>
             </Container>

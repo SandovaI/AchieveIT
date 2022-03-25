@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "./Navigation-bar";
 import Post from "./Post/Post";
 import styles from "./game.module.scss";
+
 const Game = () => {
   return (
     <body>
