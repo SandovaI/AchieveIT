@@ -6,7 +6,7 @@
 .section {
   display: flex;
   justify-content: center;
-  //height: 100vh;
+  min-height: 100vh;
   .div {
     background-color: white;
     width: 60%;

@@ -4,20 +4,11 @@ import { db } from "../../../firebase";
 import moment from "moment";
 import styles from "./post.module.scss";
 import ConnectionDisplay from "../../Wallet/ConnectionDisplay";
+import Video from "../../Video/Video";
 const Posts = () => {
   const [post, setPosts] = useState([]);
   const postImages = (post) => {
-    const post_images = post.images?.map((file) => (
-      <video
-        className={styles.video}
-        width="259px"
-        height="486px"
-        controls
-        autoPlay
-      >
-        <source src={file} />
-      </video>
-    ));
+    const post_images = post.images?.map((file) => <Video file={file} />);
     return post_images;
   };
   useEffect(() => {

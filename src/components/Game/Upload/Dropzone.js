@@ -29,6 +29,7 @@ const Dropzone = () => {
       challenge: challengeRef.current.value,
       timestamp: serverTimestamp(),
     });
+    console.log(docRef, "TEST");
     await Promise.all(
       selectedImages.map((image) => {
         const imageRef = ref(storage, `posts/${docRef.id}/${image.path}`);
@@ -40,6 +41,7 @@ const Dropzone = () => {
         });
       })
     );
+    console.log("upload finish");
     captionRef.current.value = "";
     setDescription("");
     setSelectedImages([]);
@@ -48,8 +50,7 @@ const Dropzone = () => {
   const modal = () => {
     setModalShow(true);
   };
-  console.log("db", db);
-  console.log("storage", storage);
+  console.log(process.env);
   const onDrop = useCallback((acceptedFiles) => {
     setSelectedImages(
       acceptedFiles.map((file) =>
@@ -60,8 +61,8 @@ const Dropzone = () => {
     );
   }, []);
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
-  const selected_images = selectedImages?.map((file) => (
-    <div>
+  const selected_images = selectedImages?.map((file, i) => (
+    <div key={i}>
       {/* <img src={file.preview} styles={{ width: "100px" }} alt="" /> */}
       <video className={styles.video} width="259px" height="486px" controls>
         <source src={file.preview} />
@@ -80,11 +81,7 @@ const Dropzone = () => {
             <input {...getInputProps()} />
             <h5>{description}</h5>
             <p>Or drag and drop a file</p>
-            <Button
-              className={styles.button}
-              onClick={uploadPost}
-              variant="warning"
-            >
+            <Button className={styles.button} variant="warning">
               Select File
             </Button>
           </div>

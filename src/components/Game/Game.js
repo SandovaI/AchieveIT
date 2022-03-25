@@ -4,7 +4,7 @@ import Post from "./Post/Post";
 import styles from "./game.module.scss";
 const Game = () => {
   return (
-    <body>
+    <div>
       <nav>
         <Navigation />
       </nav>
@@ -13,7 +13,7 @@ const Game = () => {
           <Post />
         </section>
       </main>
-    </body>
+    </div>
   );
 };
 export default Game;

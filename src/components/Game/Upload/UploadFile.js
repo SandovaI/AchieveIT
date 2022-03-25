@@ -1,4 +1,4 @@
-import styles from "./upload.module.scss";
+import classes from "./upload.module.scss";
 
 import React, { Component, useState } from "react";
 
@@ -9,18 +9,18 @@ import Navigation from "../Navigation-bar";
 import Dropzone from "./Dropzone";
 const UploadFile = () => {
   return (
-    <body>
+    <div>
       <nav>
         <Navigation />
       </nav>
-      <main className={styles.main}>
-        <section className={styles.section}>
-          <div className={styles.div}>
+      <main className={classes.main}>
+        <section className={classes.section}>
+          <div className={classes.div}>
             <Dropzone />
           </div>
         </section>
       </main>
-    </body>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import styles from "./app.module.scss";
+import classes from "./app.module.scss";
 
 //Components
 import WalletConnection from "./components/Wallet/WalletConnection";
@@ -25,62 +25,62 @@ function getLibrary(provider) {
 
 function App() {
   return (
-    <body className={styles.body}>
-      <header className={styles.header}>
-        <div className={styles.headerlogo}>
+    <div className={classes.body}>
+      <header className={classes.header}>
+        <div className={classes.headerlogo}>
           <NavLink to="/">
-            <img className={styles.headerLogoIcon} src={trophy} alt=""></img>
+            <img className={classes.headerLogoIcon} src={trophy} alt=""></img>
           </NavLink>
         </div>
 
-        <nav className={styles.nav}>
-          <ul className={styles.navitems}>
-            <li className={styles.navitem}>
+        <nav className={classes.nav}>
+          <ul className={classes.navitems}>
+            <li className={classes.navitem}>
               <NavButton name="About" />
             </li>
-            <li className={styles.navitem}>
+            <li className={classes.navitem}>
               <NavButton name="Roadmap" />
             </li>
-            <li className={styles.navitem}>
+            <li className={classes.navitem}>
               <NavButton name="Contact" />
             </li>
           </ul>
         </nav>
-        <div className={styles.rightHeader}>
+        <div className={classes.rightHeader}>
           <a href="https://discord.gg/u9MGrMH5ms">
             <img
-              className={styles.rightItem}
+              className={classes.rightItem}
               src={discord}
               alt="discord logo"
             ></img>
           </a>
         </div>
       </header>
-      <main className={styles.main}>
+      <main className={classes.main}>
         <Container>
-          <Row className={styles.row}>
-            <div className={styles.mainLogo}>
-              <h1 className={styles.left}>Achieve</h1>
-              <h1 className={styles.right}>IT</h1>
+          <Row className={classes.row}>
+            <div className={classes.mainLogo}>
+              <h1 className={classes.left}>Achieve</h1>
+              <h1 className={classes.right}>IT</h1>
             </div>
           </Row>
         </Container>
-        <div className={styles.background}>
-          <div className={styles.content}>
+        <div className={classes.background}>
+          <div className={classes.content}>
             <Container>
-              <Row className={styles.row}>
-                <div id="About" className={styles.motto}>
-                  <p className={styles.mottoText}>ACHIEVE</p>
-                  <p className={styles.mottoText}>YOUR FULL</p>
-                  <p className={styles.mottoText}>POTENTIAL</p>
+              <Row className={classes.row}>
+                <div id="About" className={classes.motto}>
+                  <p className={classes.mottoText}>ACHIEVE</p>
+                  <p className={classes.mottoText}>YOUR FULL</p>
+                  <p className={classes.mottoText}>POTENTIAL</p>
                 </div>
               </Row>
-              <Row className={styles.row}>
-                <Col className={styles.col} md={6}>
+              <Row className={classes.row}>
+                <Col className={classes.col} md={6}>
                   <img src={goggins} alt=""></img>
                 </Col>
-                <Col className={styles.col} md={6}>
-                  <div className={styles.about}>
+                <Col className={classes.col} md={6}>
+                  <div className={classes.about}>
                     <div>
                       <h1>What is AchieveIt?</h1>
                     </div>
@@ -93,9 +93,9 @@ function App() {
                   </div>
                 </Col>
               </Row>
-              <Row className={styles.row}>
-                <Col className={styles.col} md={6}>
-                  <div className={styles.mission}>
+              <Row className={classes.row}>
+                <Col className={classes.col} md={6}>
+                  <div className={classes.mission}>
                     <div>
                       <h1>Our Mission</h1>
                     </div>
@@ -107,18 +107,22 @@ function App() {
                     </p>
                   </div>
                 </Col>
-                <Col className={styles.col} md={6}>
+                <Col className={classes.col} md={6}>
                   <img src={wim} alt=""></img>
                 </Col>
               </Row>
-              <Row id="Roadmap" className={styles.row}>
-                <div className={styles.roadmaptext}>
+              <Row id="Roadmap" className={classes.row}>
+                <div className={classes.roadmaptext}>
                   <h1>Roadmap</h1>
                 </div>
-                <img src={roadmap} className={styles.roadmapImage} alt=""></img>
+                <img
+                  src={roadmap}
+                  className={classes.roadmapImage}
+                  alt=""
+                ></img>
               </Row>
-              <Row className={styles.row}>
-                <div className={styles.team}>
+              <Row className={classes.row}>
+                <div className={classes.team}>
                   <div>
                     <h1>Our Team</h1>
                   </div>
@@ -130,8 +134,8 @@ function App() {
                   </p>
                 </div>
               </Row>
-              <div className={styles.join}>
-                <p className={styles.jointext}>ARE YOU READY TO ACHIEVE IT?</p>
+              <div className={classes.join}>
+                <p className={classes.jointext}>ARE YOU READY TO ACHIEVE IT?</p>
                 <NavLink to="/challenges">
                   <Web3ReactProvider getLibrary={getLibrary}>
                     <WalletConnection />
@@ -142,18 +146,18 @@ function App() {
           </div>
         </div>
       </main>
-      <footer id="Contact" className={styles.footer}>
+      <footer id="Contact" className={classes.footer}>
         <Container>
           <Row>
-            <Col className={styles.footerCol} md={4}>
+            <Col className={classes.footerCol} md={4}>
               <a href="">FAQ</a>
               <a href="">Contact Us</a>
             </Col>
-            <Col className={styles.footerCol} md={4}>
+            <Col className={classes.footerCol} md={4}>
               <a href="">About</a>
               <a href="">Our Newsletter</a>
             </Col>
-            <Col className={styles.footerCol} md={4}>
+            <Col className={classes.footerCol} md={4}>
               <a href="">Discord</a>
               <a href="">Instagram</a>
               <a href="">Twitter</a>
@@ -161,7 +165,7 @@ function App() {
           </Row>
         </Container>
       </footer>
-    </body>
+    </div>
   );
 }
 

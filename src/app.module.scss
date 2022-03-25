@@ -9,18 +9,21 @@
   );
 }
 .nav {
-  display: flex;
-  align-items: center;
+  display: block;
 }
 
 .navitems {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
 }
 
 .navitem {
-  margin-left: 3rem;
   list-style-type: none;
-  padding-top: 1rem;
+  flex: 1;
+  padding: 10px 14px;
 }
 .rightHeader {
   display: flex;
@@ -38,7 +41,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 26px;
   color: #ffffff;
 }
 .header {

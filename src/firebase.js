@@ -19,7 +19,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 // const app = initializeApp(firebaseConfig);
-
+console.log(process.env);
 const storage = getStorage();
 const db = getFirestore();
 export { app, storage, db };
